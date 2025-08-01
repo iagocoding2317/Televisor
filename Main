@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        Televisor t1 = new Televisor(15, 30);
+        ControleRemoto cr = new ControleRemoto(t1);
+
+        System.out.println(cr);
+        cr.aumentarVolume(35);
+        cr.diminuirVolume(15);
+        cr.trocarCanal(8);
+        System.out.println(cr);
+        cr.desligar();
+        System.out.println(cr);
+    }
+}
