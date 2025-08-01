@@ -1,65 +1,44 @@
 public class Televisor {
-    private String canal;
+    private int canal;
     private int volume;
-    private boolean ligado;
+    private boolean ligado = true;
 
-    public Televisor() {
+    public Televisor(int canal, int volume) {
         this.canal = canal;
         this.volume = volume;
-        this.ligado = ligado;
     }
 
-    public String getCanal() {
-        return canal;
+    public void ligar() {
+        ligado = true;
     }
 
-    public void setCanal(String canal) {
-        this.canal = canal;
-    }
-     
-    public int getVolume() {
-        return volume;
+    public void desligar() {
+        ligado = false;
     }
 
-    public void setVolume(int volume) {
-        this.volume = volume;
+    public void aumentarVolume(int valor) {
+        if (ligado = true) {
+            volume = volume + valor;
+        }
     }
 
-    public boolean getLigado(){
-        return ligado;
+    public void diminuirVolume(int valor) {
+        if (ligado = true) {
+            volume = volume - valor;
+        }
     }
 
-    public void setLigado(boolean ligado){
-        this.ligado = ligado;
+    public void trocarCanal(int novoCanal) {
+        if (ligado = true) {
+            canal = novoCanal;
+        }
     }
 
-    public void ligar(){
-        ligado = true;       
-    }
-
-    public void desligar(){
-        ligado = false;       
-    }
-
-    public void aumentarVolume(int aumento){
-        if(ligado = true)
-            volume = volume + aumento;
-    }
-
-    public void diminuirVolume(int diminuicao){
-        if(ligado = true)
-            volume = volume - diminuicao;
-    }
-
-    public void trocarCanal(String outroCanal){
-        if(ligado = true)
-            canal = outroCanal;
-    }
-
-    public String toString(){
-        return String.format("O Canal:" + canal +
-        "\nCom volume: " + volume +
-        "\nEstá ligado: " + ligado +
-        "\n");
+    public String toString() {
+        return "Televisor{" +
+                "canal=" + canal +
+                ", volume=" + volume +
+                ", ligado=" + ligado +
+                '}';
     }
 }
